@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LDExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XL V8.0 - 131118" dateTime="date_and_time#2019-2-2-21:8:34" content="Fichier source LD" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.38" dateTime="date_and_time#2019-2-2-21:7:19"></contentHeader>
+	<program>
+		<identProgram name="button_voyant" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_1"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_1"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_2"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_2"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_3"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_3"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_4"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_4"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_5"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_5"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_1"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_1"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_2"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_2"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_3"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_3"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_4"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_4"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_2"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_2"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_3"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_3"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_4"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_4"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_5"></contact>
+					<HLink nbCells="1"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_5"></coil>
+					<HLink nbCells="7"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="84"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<dataBlock>
+		<variables name="V_cab_1" typeName="EBOOL" topologicalAddress="%Q0.2.2">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_mo_4" typeName="BOOL"></variables>
+		<variables name="Voy_d_5" typeName="EBOOL" topologicalAddress="%Q0.2.11">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_cab_1" typeName="BOOL"></variables>
+		<variables name="V_cab_4" typeName="EBOOL" topologicalAddress="%Q0.2.5">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_mo_1" typeName="BOOL"></variables>
+		<variables name="called_cab_2" typeName="BOOL"></variables>
+		<variables name="V_cab_5" typeName="EBOOL" topologicalAddress="%Q0.2.10">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_2" typeName="EBOOL" topologicalAddress="%Q0.2.3">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_de_3" typeName="BOOL"></variables>
+		<variables name="called_cab_5" typeName="BOOL"></variables>
+		<variables name="Voy_d_2" typeName="EBOOL" topologicalAddress="%Q0.2.18">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_mo_3" typeName="BOOL"></variables>
+		<variables name="Voy_m_2" typeName="EBOOL" topologicalAddress="%Q0.2.7">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_4" typeName="EBOOL" topologicalAddress="%Q0.2.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_3" typeName="EBOOL" topologicalAddress="%Q0.2.4">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_de_5" typeName="BOOL"></variables>
+		<variables name="Voy_m_1" typeName="EBOOL" topologicalAddress="%Q0.2.6">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_3" typeName="EBOOL" topologicalAddress="%Q0.2.19">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_de_2" typeName="BOOL"></variables>
+		<variables name="called_de_4" typeName="BOOL"></variables>
+		<variables name="Voy_m_3" typeName="EBOOL" topologicalAddress="%Q0.2.8">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_4" typeName="EBOOL" topologicalAddress="%Q0.2.9">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_cab_4" typeName="BOOL"></variables>
+		<variables name="called_mo_2" typeName="BOOL"></variables>
+		<variables name="called_cab_3" typeName="BOOL"></variables>
+	</dataBlock>
+</LDExchangeFile>

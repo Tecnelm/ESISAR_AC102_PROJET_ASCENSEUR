@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VariablesExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XLS V13.0 - 170914B" dateTime="date_and_time#2019-2-20-9:53:54" content="Fichier source variables" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.64" dateTime="date_and_time#2019-2-20-8:16:55"></contentHeader>
+	<dataBlock>
+		<variables name="AFFICHEUR" typeName="ARRAY[0..3] OF EBOOL" topologicalAddress="%Q0.2.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_2_de" typeName="EBOOL" topologicalAddress="%I0.1.8">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_3_de" typeName="EBOOL" topologicalAddress="%I0.1.9">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_4_de" typeName="EBOOL" topologicalAddress="%I0.1.10">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_5_de" typeName="EBOOL" topologicalAddress="%I0.1.11">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_1" typeName="EBOOL" topologicalAddress="%I0.1.17">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_2" typeName="EBOOL" topologicalAddress="%I0.1.18">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_3" typeName="EBOOL" topologicalAddress="%I0.1.19">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_4" typeName="EBOOL" topologicalAddress="%I0.1.12">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_5" typeName="EBOOL" topologicalAddress="%I0.1.13">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_1" typeName="EBOOL" topologicalAddress="%I0.1.23">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_2" typeName="EBOOL" topologicalAddress="%I0.1.28">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_3" typeName="EBOOL" topologicalAddress="%I0.1.29">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_4" typeName="EBOOL" topologicalAddress="%I0.1.30">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Bp_atu" typeName="EBOOL" topologicalAddress="%I0.1.16">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Cmd_r_s" typeName="EBOOL" topologicalAddress="%I0.1.0">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Desc_cab" typeName="EBOOL" topologicalAddress="%Q0.2.1">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_1" typeName="EBOOL" topologicalAddress="%I0.1.2">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_2" typeName="EBOOL" topologicalAddress="%I0.1.3">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_3" typeName="EBOOL" topologicalAddress="%I0.1.4">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_4" typeName="EBOOL" topologicalAddress="%I0.1.5">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_5" typeName="EBOOL" topologicalAddress="%I0.1.6">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Fdc_bas" typeName="EBOOL" topologicalAddress="%I0.1.7">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_2" typeName="EBOOL" topologicalAddress="%Q0.2.18">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Mont_cab" typeName="EBOOL" topologicalAddress="%Q0.2.0">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et1" typeName="EBOOL" topologicalAddress="%I0.1.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et2" typeName="EBOOL" topologicalAddress="%I0.1.15">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et3" typeName="EBOOL" topologicalAddress="%I0.1.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et4" typeName="EBOOL" topologicalAddress="%I0.1.21">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et5" typeName="EBOOL" topologicalAddress="%I0.1.22">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_1" typeName="EBOOL" topologicalAddress="%Q0.2.2">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_2" typeName="EBOOL" topologicalAddress="%Q0.2.3">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_3" typeName="EBOOL" topologicalAddress="%Q0.2.4">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_4" typeName="EBOOL" topologicalAddress="%Q0.2.5">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_5" typeName="EBOOL" topologicalAddress="%Q0.2.10">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_stage_1" typeName="BOOL"></variables>
+		<variables name="Voy_d_3" typeName="EBOOL" topologicalAddress="%Q0.2.19">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_4" typeName="EBOOL" topologicalAddress="%Q0.2.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_5" typeName="EBOOL" topologicalAddress="%Q0.2.11">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_1" typeName="EBOOL" topologicalAddress="%Q0.2.6">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_2" typeName="EBOOL" topologicalAddress="%Q0.2.7">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_3" typeName="EBOOL" topologicalAddress="%Q0.2.8">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_4" typeName="EBOOL" topologicalAddress="%Q0.2.9">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="is_doors_closed" typeName="BOOL"></variables>
+		<variables name="last_floor" typeName="INT">
+			<variableInit value="0"></variableInit>
+		</variables>
+		<variables name="moving" typeName="INT"></variables>
+		<variables name="moved" typeName="INT">
+			<variableInit value="0"></variableInit>
+		</variables>
+		<variables name="called_cab_1" typeName="BOOL"></variables>
+		<variables name="called_cab_2" typeName="BOOL"></variables>
+		<variables name="called_cab_3" typeName="BOOL"></variables>
+		<variables name="called_cab_4" typeName="BOOL"></variables>
+		<variables name="called_cab_5" typeName="BOOL"></variables>
+		<variables name="called_stage_2" typeName="BOOL"></variables>
+		<variables name="called_stage_3" typeName="BOOL"></variables>
+		<variables name="called_stage_4" typeName="BOOL"></variables>
+		<variables name="called_stage_5" typeName="BOOL"></variables>
+		<variables name="called_mo_1" typeName="BOOL"></variables>
+		<variables name="called_mo_2" typeName="BOOL"></variables>
+		<variables name="called_mo_3" typeName="BOOL"></variables>
+		<variables name="called_mo_4" typeName="BOOL"></variables>
+		<variables name="called_de_2" typeName="BOOL"></variables>
+		<variables name="called_de_3" typeName="BOOL"></variables>
+		<variables name="called_de_4" typeName="BOOL"></variables>
+		<variables name="called_de_5" typeName="BOOL"></variables>
+		<variables name="security_mode" typeName="BOOL">
+			<variableInit value="TRUE"></variableInit>
+		</variables>
+		<variables name="other_stage_request" typeName="BOOL"></variables>
+		<variables name="allow_restart" typeName="BOOL"></variables>
+		<variables name="break" typeName="BOOL"></variables>
+	</dataBlock>
+</VariablesExchangeFile>

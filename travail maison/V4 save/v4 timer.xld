@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LDExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XL V8.0 - 131118" dateTime="date_and_time#2019-2-2-23:8:39" content="Fichier source LD" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.39" dateTime="date_and_time#2019-2-2-23:7:6"></contentHeader>
+	<program>
+		<identProgram name="Timer" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<emptyCell nbCells="3"></emptyCell>
+					<FFBBlock instanceName="TP_0" typeName="TP" additionnalPinNumber="0" enEnO="true" width="10" height="4">
+						<objPosition posX="3" posY="1"></objPosition>
+						<descriptionFFB execAfter="">
+							<inputVariable invertedPin="false" formalParameter="EN"></inputVariable>
+							<inputVariable invertedPin="false" formalParameter="IN"></inputVariable>
+							<inputVariable invertedPin="false" formalParameter="PT" effectiveParameter="t#5s"></inputVariable>
+							<outputVariable invertedPin="false" formalParameter="ENO"></outputVariable>
+							<outputVariable invertedPin="false" formalParameter="Q"></outputVariable>
+							<outputVariable invertedPin="false" formalParameter="ET"></outputVariable>
+						</descriptionFFB>
+					</FFBBlock>
+					<emptyCell nbCells="6"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="openContact" contactVariableName="break"></contact>
+					<HLink nbCells="2"></HLink>
+					<emptyCell nbCells="2"></emptyCell>
+					<coil typeCoil="notCoil" coilVariableName="allow_restart"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="96"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<dataBlock>
+		<variables name="TP_0" typeName="TP"></variables>
+		<variables name="allow_restart" typeName="BOOL"></variables>
+		<variables name="break" typeName="BOOL"></variables>
+	</dataBlock>
+</LDExchangeFile>

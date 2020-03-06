@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FEFExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XLS V13.0 - 170914B" dateTime="date_and_time#2019-4-10-10:51:37" content="Fichier source projet" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.105" dateTime="date_and_time#2019-4-10-9:22:42"></contentHeader>
+	<commParameters>
+		<PLCAddress address="172.20.11.102" media="TCPIP" nbTries="3" timeout="3000" highSpeed="0"></PLCAddress>
+		<simulatorAddress address="127.0.0.1" media="TCPIP" nbTries="3" timeout="3000"></simulatorAddress>
+		<bandwith animation="70" PLCMonitor="10" PLCScreen="10" diagnostic="10"></bandwith>
+	</commParameters>
+	<IOConf>
+		<PLC autoRun="false" MWInitZero="true" ColdStartOnly="false" ccotfActive="false" numberInternalWord="1024" numberConstantWord="256" numberInternalBit="512">
+			<partItem family="Micro Basic" partNumber="BMXP342020" vendorName="Schneider Automation" version="02.00"></partItem>
+			<equipInfo topoAddress="\0.0\0.0" position="0"></equipInfo>
+			<configATS>
+				<busATS name="XBusMicro">
+					<equipInfo topoAddress="\0" position="0"></equipInfo>
+					<rackATS>
+						<partItem family="Rack" partNumber="BMEXBP0400" vendorName="Schneider Automation" version="01.00"></partItem>
+						<equipInfo topoAddress="\0.0\0" position="0"></equipInfo>
+						<powerSupply>
+							<partItem family="Supply" partNumber="BMXCPS2010" vendorName="Schneider Automation" version="01.00"></partItem>
+							<equipInfo topoAddress="\0.0\0.(P) (P)" position="-1"></equipInfo>
+						</powerSupply>
+						<moduleATS UCMod="true">
+							<partItem family="Micro Basic" partNumber="BMXP342020" vendorName="Schneider Automation" version="02.00"></partItem>
+							<equipInfo topoAddress="\0.0\0.0" position="0"></equipInfo>
+							<configModule>
+								<channelATS ASFCatKey="ModbusSerialPort" task="MAST" number="0">
+									<descFB code="0" version="255"></descFB>
+									<descIOB IOBFileName="IOB_3_0010000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x7"></hexaValue>
+										<hexaValue hexaValue="0xb04"></hexaValue>
+										<hexaValue hexaValue="0x2"></hexaValue>
+										<hexaValue hexaValue="0x1"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+							</configModule>
+						</moduleATS>
+						<moduleATS>
+							<partItem family="Discrete" partNumber="BMXDDI3202K" vendorName="Schneider Automation" version="02.00"></partItem>
+							<equipInfo topoAddress="\0.0\0.1" position="1"></equipInfo>
+							<configModule>
+								<channelATS ASFCatKey="BasicInRackTORInSTD_MASTER" task="MAST" number="0">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0002000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x1"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+								<channelATS ASFCatKey="BasicInRackTORInSTD_MASTER" task="MAST" number="8">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0002000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x1"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+								<channelATS ASFCatKey="BasicInRackTORInSTD_MASTER" task="MAST" number="16">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0002000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x1"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+								<channelATS ASFCatKey="BasicInRackTORInSTD_MASTER" task="MAST" number="24">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0002000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x1"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+							</configModule>
+						</moduleATS>
+						<moduleATS>
+							<partItem family="Discrete" partNumber="BMXDDO3202K" vendorName="Schneider Automation" version="02.00"></partItem>
+							<equipInfo topoAddress="\0.0\0.2" position="2"></equipInfo>
+							<configModule>
+								<channelATS ASFCatKey="BaInRackTOROutReactivateAndFallBackAndSupplyMonitoring_MASTER" task="MAST" number="0">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0102000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x16"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+								<channelATS ASFCatKey="BaInRackTOROutReactivateAndFallBackAndSupplyMonitoring_MASTER" task="MAST" number="8">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0102000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x16"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+								<channelATS ASFCatKey="BaInRackTOROutReactivateAndFallBackAndSupplyMonitoring_MASTER" task="MAST" number="16">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0102000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x16"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+								<channelATS ASFCatKey="BaInRackTOROutReactivateAndFallBackAndSupplyMonitoring_MASTER" task="MAST" number="24">
+									<descFB code="1" version="17"></descFB>
+									<descIOB IOBFileName="IOB_0_0102000_AV4" version="1"></descIOB>
+									<paramKW>
+										<hexaValue hexaValue="0x16"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+										<hexaValue hexaValue="0x0"></hexaValue>
+									</paramKW>
+								</channelATS>
+							</configModule>
+						</moduleATS>
+					</rackATS>
+				</busATS>
+			</configATS>
+		</PLC>
+	</IOConf>
+	<EFBSource nameOfEFBType="TRIGGER" version="1.00" dateTime="dt#2013-11-06-18:01:15">
+		<comment>Detection of all edges</comment>
+		<attribute name="TypeDescriptiveForm" value="  The function block recognizes all types of edges (1 -&gt; 0 und 0 -&gt; 1) at the CLK input.&#xA;  Output EDGE becomes &quot;1&quot; if there is a transition from &quot;0&quot; to &quot;1&quot; or from &quot;1&quot; to &quot;0&quot; at CLK;&#xA;  otherwise it remains on &quot;0&quot;.&#xA;&#xA;  If there is a transition from &quot;0&quot; to &quot;1&quot; at the CLK input, the RISE output becomes &quot;1&quot;;&#xA;  if there is a transition from &quot;1&quot; to &quot;0&quot; at the CLK input, the FALL output becomes &quot;1&quot;;&#xA;  if neither of these two instances occurs, both outputs become &quot;0&quot;.&#xA;"></attribute>
+		<attribute name="IsTypeHidden" value="FALSE"></attribute>
+		<attribute name="IsTypeDiagnostic" value="FALSE"></attribute>
+		<attribute name="TypeCodeCheckSumString" value="C464"></attribute>
+		<attribute name="TypeSignatureCheckSumString" value="3ED5"></attribute>
+		<ExternalToolsOnly>
+			<inputParameters>
+				<variables name="CLK" typeName="BOOL">
+					<comment>Clock input</comment>
+					<attribute name="PositionPin" value="1"></attribute>
+					<attribute name="IsPinDiagnosticable" value="0"></attribute>
+				</variables>
+			</inputParameters>
+			<outputParameters>
+				<variables name="RISE" typeName="BOOL">
+					<comment>Rising edge detected</comment>
+					<attribute name="PositionPin" value="1"></attribute>
+				</variables>
+				<variables name="EDGE" typeName="BOOL">
+					<comment>Edge detected</comment>
+					<attribute name="PositionPin" value="2"></attribute>
+				</variables>
+				<variables name="FALL" typeName="BOOL">
+					<comment>Falling edge detected</comment>
+					<attribute name="PositionPin" value="3"></attribute>
+				</variables>
+			</outputParameters>
+		</ExternalToolsOnly>
+	</EFBSource>
+	<EFBSource nameOfEFBType="TON" version="1.00" dateTime="dt#2013-11-06-17:01:21">
+		<comment>On delay</comment>
+		<attribute name="TypeDescriptiveForm" value="  The function block is used as the On delay.  When the function block is called for the first time, the initial state of ET is &quot;0&quot;.&#xA;"></attribute>
+		<attribute name="IsTypeHidden" value="FALSE"></attribute>
+		<attribute name="IsTypeDiagnostic" value="FALSE"></attribute>
+		<attribute name="TypeCodeCheckSumString" value="B257"></attribute>
+		<attribute name="TypeSignatureCheckSumString" value="16D2"></attribute>
+		<ExternalToolsOnly>
+			<inputParameters>
+				<variables name="IN" typeName="BOOL">
+					<comment>Start delay</comment>
+					<attribute name="PositionPin" value="1"></attribute>
+					<attribute name="IsPinDiagnosticable" value="0"></attribute>
+				</variables>
+				<variables name="PT" typeName="TIME">
+					<comment>Preset delay time</comment>
+					<attribute name="PositionPin" value="2"></attribute>
+				</variables>
+			</inputParameters>
+			<outputParameters>
+				<variables name="Q" typeName="BOOL">
+					<comment>Delayed output</comment>
+					<attribute name="PositionPin" value="1"></attribute>
+				</variables>
+				<variables name="ET" typeName="TIME">
+					<comment>Internal time</comment>
+					<attribute name="PositionPin" value="2"></attribute>
+				</variables>
+			</outputParameters>
+		</ExternalToolsOnly>
+	</EFBSource>
+	<EFBSource nameOfEFBType="TP" version="1.00" dateTime="dt#2013-11-06-17:01:21">
+		<comment>Pulse</comment>
+		<attribute name="TypeDescriptiveForm" value="  The function block is used for the generation of a pulse with defined duration.  When the function block is called for the first time, the initial state of ET is &quot;0&quot;.&#xA;"></attribute>
+		<attribute name="IsTypeHidden" value="FALSE"></attribute>
+		<attribute name="IsTypeDiagnostic" value="FALSE"></attribute>
+		<attribute name="TypeCodeCheckSumString" value="C1F7"></attribute>
+		<attribute name="TypeSignatureCheckSumString" value="16D2"></attribute>
+		<ExternalToolsOnly>
+			<inputParameters>
+				<variables name="IN" typeName="BOOL">
+					<comment>Trigger pulse</comment>
+					<attribute name="PositionPin" value="1"></attribute>
+					<attribute name="IsPinDiagnosticable" value="0"></attribute>
+				</variables>
+				<variables name="PT" typeName="TIME">
+					<comment>Preset pulse duration</comment>
+					<attribute name="PositionPin" value="2"></attribute>
+				</variables>
+			</inputParameters>
+			<outputParameters>
+				<variables name="Q" typeName="BOOL">
+					<comment>Pulse output</comment>
+					<attribute name="PositionPin" value="1"></attribute>
+				</variables>
+				<variables name="ET" typeName="TIME">
+					<comment>Internal time</comment>
+					<attribute name="PositionPin" value="2"></attribute>
+				</variables>
+			</outputParameters>
+		</ExternalToolsOnly>
+	</EFBSource>
+	<dataBlock>
+		<variables name="AFFICHEUR" typeName="ARRAY[0..3] OF EBOOL" topologicalAddress="%Q0.2.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_2_de" typeName="EBOOL" topologicalAddress="%I0.1.8">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_3_de" typeName="EBOOL" topologicalAddress="%I0.1.9">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_4_de" typeName="EBOOL" topologicalAddress="%I0.1.10">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_5_de" typeName="EBOOL" topologicalAddress="%I0.1.11">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_1" typeName="EBOOL" topologicalAddress="%I0.1.17">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_2" typeName="EBOOL" topologicalAddress="%I0.1.18">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_3" typeName="EBOOL" topologicalAddress="%I0.1.19">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_4" typeName="EBOOL" topologicalAddress="%I0.1.12">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_5" typeName="EBOOL" topologicalAddress="%I0.1.13">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_1" typeName="EBOOL" topologicalAddress="%I0.1.23">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_2" typeName="EBOOL" topologicalAddress="%I0.1.28">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_3" typeName="EBOOL" topologicalAddress="%I0.1.29">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_4" typeName="EBOOL" topologicalAddress="%I0.1.30">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Bp_atu" typeName="EBOOL" topologicalAddress="%I0.1.16">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Cmd_r_s" typeName="EBOOL" topologicalAddress="%I0.1.0">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Desc_cab" typeName="EBOOL" topologicalAddress="%Q0.2.1">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_1" typeName="EBOOL" topologicalAddress="%I0.1.2">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_2" typeName="EBOOL" topologicalAddress="%I0.1.3">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_3" typeName="EBOOL" topologicalAddress="%I0.1.4">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_4" typeName="EBOOL" topologicalAddress="%I0.1.5">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_5" typeName="EBOOL" topologicalAddress="%I0.1.6">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Fdc_bas" typeName="EBOOL" topologicalAddress="%I0.1.7">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Mont_cab" typeName="EBOOL" topologicalAddress="%Q0.2.0">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et1" typeName="EBOOL" topologicalAddress="%I0.1.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et2" typeName="EBOOL" topologicalAddress="%I0.1.15">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et3" typeName="EBOOL" topologicalAddress="%I0.1.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et4" typeName="EBOOL" topologicalAddress="%I0.1.21">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et5" typeName="EBOOL" topologicalAddress="%I0.1.22">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_1" typeName="EBOOL" topologicalAddress="%Q0.2.2">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_2" typeName="EBOOL" topologicalAddress="%Q0.2.3">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_3" typeName="EBOOL" topologicalAddress="%Q0.2.4">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_4" typeName="EBOOL" topologicalAddress="%Q0.2.5">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="V_cab_5" typeName="EBOOL" topologicalAddress="%Q0.2.10">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_2" typeName="EBOOL" topologicalAddress="%Q0.2.18">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_3" typeName="EBOOL" topologicalAddress="%Q0.2.19">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_4" typeName="EBOOL" topologicalAddress="%Q0.2.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_d_5" typeName="EBOOL" topologicalAddress="%Q0.2.11">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_1" typeName="EBOOL" topologicalAddress="%Q0.2.6">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_2" typeName="EBOOL" topologicalAddress="%Q0.2.7">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_3" typeName="EBOOL" topologicalAddress="%Q0.2.8">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Voy_m_4" typeName="EBOOL" topologicalAddress="%Q0.2.9">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="is_doors_closed" typeName="BOOL"></variables>
+		<variables name="last_floor" typeName="INT">
+			<variableInit value="0"></variableInit>
+		</variables>
+		<variables name="moving" typeName="INT"></variables>
+		<variables name="moved" typeName="INT">
+			<variableInit value="0"></variableInit>
+		</variables>
+		<variables name="called_cab_1" typeName="BOOL"></variables>
+		<variables name="called_cab_2" typeName="BOOL"></variables>
+		<variables name="called_cab_3" typeName="BOOL"></variables>
+		<variables name="called_cab_4" typeName="BOOL"></variables>
+		<variables name="called_cab_5" typeName="BOOL"></variables>
+		<variables name="called_stage_1" typeName="BOOL"></variables>
+		<variables name="called_stage_2" typeName="BOOL"></variables>
+		<variables name="called_stage_3" typeName="BOOL"></variables>
+		<variables name="called_stage_4" typeName="BOOL"></variables>
+		<variables name="called_stage_5" typeName="BOOL"></variables>
+		<variables name="called_mo_1" typeName="BOOL"></variables>
+		<variables name="called_mo_2" typeName="BOOL"></variables>
+		<variables name="called_mo_3" typeName="BOOL"></variables>
+		<variables name="called_mo_4" typeName="BOOL"></variables>
+		<variables name="called_de_2" typeName="BOOL"></variables>
+		<variables name="called_de_3" typeName="BOOL"></variables>
+		<variables name="called_de_4" typeName="BOOL"></variables>
+		<variables name="called_de_5" typeName="BOOL"></variables>
+		<variables name="security_mode" typeName="BOOL">
+			<variableInit value="TRUE"></variableInit>
+		</variables>
+		<variables name="other_stage_request" typeName="BOOL"></variables>
+		<variables name="TON_0" typeName="TRIGGER"></variables>
+		<variables name="TP_0" typeName="TP"></variables>
+		<variables name="allow_restart" typeName="BOOL"></variables>
+		<variables name="break" typeName="BOOL"></variables>
+		<variables name="to_move" typeName="INT"></variables>
+	</dataBlock>
+	<Motion></Motion>
+	<logicConf>
+		<resource resName="Micro Basic" resIdent="BMX P34 2020 02.00">
+			<taskDesc task="MAST" taskType="cyclic" valueType="0" maxExecTime="250">
+				<sectionDesc name="Pb_Porte" SectionOrder="1"></sectionDesc>
+				<sectionDesc name="button_voyant" SectionOrder="2"></sectionDesc>
+				<sectionDesc name="called_stage" SectionOrder="3"></sectionDesc>
+				<sectionDesc name="ascenseur_code" SectionOrder="4"></sectionDesc>
+				<sectionDesc name="Timer" SectionOrder="5"></sectionDesc>
+			</taskDesc>
+			<FMDesc name="Projet Fonctionnel" FMId="ROOT"></FMDesc>
+		</resource>
+	</logicConf>
+	<program>
+		<identProgram name="Pb_Porte" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<emptyLine nbRows="2"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="Porte_et1"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et2"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et3"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et4"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et5"></contact>
+					<coil typeCoil="coil" coilVariableName="is_doors_closed"></coil>
+					<HLink nbCells="4"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="97"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<program>
+		<identProgram name="button_voyant" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_1"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_1"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_2"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_2"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_3"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_3"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_4"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_4"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_cab_5"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="V_cab_5"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_1"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_1"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_2"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_2"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_3"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_3"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_4"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_m_4"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_2"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_2"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_3"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_3"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_4"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_4"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_5"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="Voy_d_5"></coil>
+					<HLink nbCells="6"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="84"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<program>
+		<identProgram name="called_stage" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_cab_1"></contact>
+					</shortCircuit>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_mo_1"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="called_stage_1"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_cab_2"></contact>
+					</shortCircuit>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_mo_2"></contact>
+					</shortCircuit>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="called_stage_2"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_2"></contact>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_cab_3"></contact>
+					</shortCircuit>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_mo_3"></contact>
+					</shortCircuit>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="called_stage_3"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_3"></contact>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_cab_4"></contact>
+					</shortCircuit>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_mo_4"></contact>
+					</shortCircuit>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="called_stage_4"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_4"></contact>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="openContact" contactVariableName="called_cab_5"></contact>
+					</shortCircuit>
+					<emptyCell nbCells="8"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="2"></HLink>
+					<contact typeContact="openContact" contactVariableName="called_de_5"></contact>
+					<HLink nbCells="2"></HLink>
+					<coil typeCoil="coil" coilVariableName="called_stage_5"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="83"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<program>
+		<identProgram name="ascenseur_code" type="section" task="MAST"></identProgram>
+		<STSource>(* "moving" :
+	0 : no move
+	1 : up
+	2 : down
+	3: break*)
+
+
+if Cmd_r_s then
+	if (not security_mode) then
+
+	if  (called_stage_1 or called_stage_2 or called_stage_3 or called_stage_4 or called_stage_5)and allow_restart and is_doors_closed and not(break) and (moving = 0 or moving =3 )then
+		case (moved) of 
+			1:
+				if last_floor &lt;5 then
+					case last_floor of 
+					2: if(called_mo_3 or called_mo_4 or called_de_5 or called_cab_3 or called_cab_4 or called_cab_5)then moving := moved;end_if;
+					3: if(called_mo_4 or called_de_5 or called_cab_4 or called_cab_5) then moving := moved;end_if;
+					4:if(called_de_5 or called_cab_5) then moving := moved;end_if;
+					end_case;
+					case last_floor of 
+				
+					2: if( called_cab_1 and not (called_cab_3 or called_cab_4 or called_cab_5)) then moving :=2; end_if;
+					3: if( (called_cab_1 or called_cab_2)  and not ( called_cab_4 or called_cab_5)) then moving :=2;end_if;
+					4: if( (called_cab_1 or called_cab_2 or called_cab_3) and not (called_cab_3 or called_cab_4 or called_cab_5)) then moving :=2;end_if;
+				
+					end_case;			
+				else
+				 moving :=2;
+				end_if;
+			
+			2:
+				if last_floor &gt;1 then
+					case last_floor of 
+					2: if(called_mo_1 or called_cab_1)then moving := moved;end_if;
+					3: if(called_mo_1 or called_de_2 or called_cab_1 or called_cab_2) then moving := moved;end_if;
+					4:if(called_mo_1 or called_de_2 or called_de_3 or called_cab_1 or called_cab_2 or called_cab_3) then moving := moved;end_if;
+					end_case;
+
+					case last_floor of 
+				
+					2: if( (called_cab_5 or called_cab_4 or called_cab_3) and not (called_cab_1)) then moving :=1;end_if;
+					3: if( (called_cab_5 or called_cab_4)  and not ( called_cab_1 or called_cab_2)) then moving :=1;end_if;
+					4: if( (called_cab_5) and not ( called_cab_1 or called_cab_2 or called_cab_3)) then moving :=1;end_if;
+				
+					end_case;			
+				else
+				 moving :=1;
+				end_if;
+		end_case;
+	end_if;
+
+	(* etage 1 *)
+		if Ap_cab_1 then called_cab_1 := true;end_if;
+		if Ap_mo_1 then called_mo_1 := true;  end_if;
+
+		
+
+
+		if Det_et_1 then 
+			last_floor :=1;
+			if called_stage_1 then 
+				moving :=0;
+				called_mo_1 := false;
+				called_cab_1 := false;
+				break := true;
+			end_if;
+		end_if;
+
+
+	(* etage 2 *)
+		if Ap_cab_2 then called_cab_2 := true; end_if;
+		if Ap_mo_2   then called_mo_2 := true;  end_if;
+		if Ap_2_de  then called_de_2 := true;  end_if;
+
+		if Det_et_2 then
+			last_floor :=2;
+			if called_stage_2 then
+				if not called_cab_2 then
+					case moving of
+					1: 	if called_mo_2 or called_de_2 and not(called_stage_5 or called_stage_4 or called_stage_3)then 
+							moved := moving;
+							moving :=3 ; 
+						end_if;
+					2:	if called_de_2 or called_mo_2 and not(called_stage_1) then 
+							moved := moving;
+							moving :=3 ;
+						end_if;
+					end_case;
+				else
+					if not(moving=3) then
+						moved := moving;
+						moving :=3;
+					end_if;	
+				end_if;
+
+				if moving = 3 or moving =0 then
+					called_mo_2 := false;
+					called_de_2 := false;
+					called_cab_2 := false;
+					break := true;
+				end_if;
+			end_if;
+		end_if;
+
+	(* etage 3 *)
+		if Ap_cab_3 then called_cab_3 := true; end_if;
+		if Ap_mo_3  then called_mo_3 := true;  end_if;
+		if Ap_3_de  then called_de_3 := true;  end_if;
+
+
+		if Det_et_3 then
+			last_floor :=3;
+			if called_stage_3 then
+				if not called_cab_3 then
+					case moving of
+					1: 	if called_mo_3 or called_de_3 and not(called_stage_5 or called_stage_4) then 
+							moved := moving;
+							moving :=3 ; 
+						end_if;
+					2:	if called_de_3 or called_mo_3 and not(called_stage_2 or called_stage_1) then 
+							moved := moving;
+							moving :=3 ;
+						end_if;
+					end_case;
+				else
+					if not(moving=3) then
+						moved := moving;
+						moving :=3;
+					end_if;
+
+				end_if;
+				
+				if moving = 3 or moving = 0  then
+					called_mo_3 := false;
+					called_de_3 := false;
+					called_cab_3 := false;
+					break := true;
+				end_if;
+			
+			end_if;
+			
+		end_if;
+
+	(* etage 4 *)
+		if Ap_cab_4 then called_cab_4 := true;end_if;
+		if Ap_mo_4 then called_mo_4 := true;  end_if;
+		if Ap_4_de then called_de_4 := true;  end_if;
+
+		if Det_et_4 then
+			last_floor :=4;
+			if called_stage_4 then
+				if not called_cab_4 then
+					case moving of
+					1: 	if called_mo_4 or called_de_4 and not(called_stage_5) then 
+							moved := moving;
+							moving :=3 ; 
+						end_if;
+					2:	if called_de_4 or called_mo_4 and not(called_stage_3 or called_stage_2 or called_stage_1) then 
+							moved := moving;
+							moving :=3 ;
+						end_if;
+					end_case;
+				else
+					if not(moving=3) then
+						moved := moving;
+						moving :=3;
+					end_if;	
+				end_if;
+
+				if moving = 3 or moving = 0 then
+					called_mo_4 := false;
+					called_de_4 := false;
+					called_cab_4 := false;
+					break := true;
+				end_if;
+			end_if;
+		end_if;
+
+	(* etage 5 *)
+		if Ap_cab_5 then called_cab_5 := true;end_if;
+		if Ap_5_de then called_de_5 := true;  end_if;
+
+		if Det_et_5 then	
+			last_floor :=5;
+			if called_stage_5 then 
+				moving :=0;
+				called_cab_5 := false;
+				called_de_5 := false;
+				break := true;
+			end_if;
+		end_if;
+		(* sécurité partie*)
+		if Fdc_bas then moving := 0; security_mode :=true; Mont_cab:=false; Desc_cab:=false; end_if;
+		if not Bp_atu then security_mode := true; end_if;
+	
+		if not(is_doors_closed) then
+			if moving = 0 or moving = 3 then
+				case last_floor of
+					1: 	if not( Porte_et2 and Porte_et3 and Porte_et4 and Porte_et5) then security_mode := true; end_if;
+					2:	if not( Porte_et1 and Porte_et3 and Porte_et4 and Porte_et5) then security_mode := true; end_if;
+					3:	if not( Porte_et1 and Porte_et2 and Porte_et4 and Porte_et5) then security_mode := true; end_if;
+					4:	if not( Porte_et1 and Porte_et2 and Porte_et3 and Porte_et5) then security_mode := true; end_if;
+					5:	if not( Porte_et1 and Porte_et2 and Porte_et3 and Porte_et4) then security_mode := true; end_if;
+					else security_mode := true;
+				end_case;
+
+			else
+				security_mode := true;
+			end_if;		
+		end_if;
+		if security_mode then
+
+			last_floor :=0;
+			moving :=0;
+			Mont_cab := false;
+			Desc_cab := false;	
+		
+			called_cab_1:=false;
+			called_cab_2:=false;
+			called_cab_3:=false;
+			called_cab_4:=false;
+			called_cab_5:=false;
+		
+			called_de_2:=false;
+			called_de_3:=false;
+			called_de_4:=false;
+			called_de_5:=false;
+
+			called_mo_1:=false;
+			called_mo_2:=false;
+			called_mo_3:=false;
+			called_mo_4:=false;
+		end_if;
+
+	else (*SI mode sécurité*)
+		if  Bp_atu then
+			if Ap_cab_1 then called_cab_1 := true; end_if;
+			if Ap_mo_1  then called_mo_1 := true;  end_if;
+
+			if called_stage_1 and is_doors_closed then
+				moving := 2;
+			end_if;
+
+			if Det_et_1 then 
+				last_floor :=1;
+				security_mode:=false;
+				moving :=0;
+				called_cab_1 := false;
+				called_mo_1 :=false;
+			end_if;
+		end_if;
+		if not is_doors_closed or not Bp_atu then
+
+			last_floor :=0;
+			moving :=0;
+
+			Mont_cab := false;
+			Desc_cab := false;
+			
+			called_cab_1:=false;
+			called_mo_1:=false;		
+		end_if;
+
+	end_if;
+else 
+	
+	called_cab_1:=false;
+	called_cab_2:=false;
+	called_cab_3:=false;
+	called_cab_4:=false;
+	called_cab_5:=false;
+		
+	called_de_2:=false;
+	called_de_3:=false;
+	called_de_4:=false;
+	called_de_5:=false;
+
+	called_mo_1:=false;
+	called_mo_2:=false;
+	called_mo_3:=false;
+	called_mo_4:=false;
+	(*security_mode:=false;*)
+	moving :=0;
+	
+	last_floor:=0;
+	security_mode:=true;
+	Mont_cab := false;
+	Desc_cab := false;
+end_if;
+
+(*déplacement et affichage*)
+
+case moving of
+0,3: Mont_cab := false;
+	Desc_cab := false;
+
+1: Mont_cab := true; 
+	Desc_cab := false; 
+	moved := 1;
+
+2:  Mont_cab := false; 
+    Desc_cab := true; 
+    moved := 2;
+end_case;
+
+case last_floor of
+	1:	AFFICHEUR[0] := TRUE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := FALSE;
+
+	2:	AFFICHEUR[0] := FALSE;
+		AFFICHEUR[1] := TRUE;
+		AFFICHEUR[2] := False;
+
+	3:	AFFICHEUR[0] := TRUE;
+		AFFICHEUR[1] := TRUE;
+		AFFICHEUR[2] := FALSE;
+
+	4:	AFFICHEUR[0] := FALSE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := TRUE;
+
+	5:	AFFICHEUR[0] := TRUE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := TRUE;
+	else 
+		AFFICHEUR[0] := FALSE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := FALSE;
+end_case;
+
+if not allow_restart then
+	break:= false;
+end_if;
+</STSource>
+	</program>
+	<program>
+		<identProgram name="Timer" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<emptyCell nbCells="3"></emptyCell>
+					<FFBBlock instanceName="TP_0" typeName="TP" additionnalPinNumber="0" enEnO="true" width="10" height="4">
+						<objPosition posX="3" posY="1"></objPosition>
+						<descriptionFFB execAfter="">
+							<inputVariable invertedPin="false" formalParameter="EN"></inputVariable>
+							<inputVariable invertedPin="false" formalParameter="IN"></inputVariable>
+							<inputVariable invertedPin="false" formalParameter="PT" effectiveParameter="t#2s"></inputVariable>
+							<outputVariable invertedPin="false" formalParameter="ENO"></outputVariable>
+							<outputVariable invertedPin="false" formalParameter="Q"></outputVariable>
+							<outputVariable invertedPin="false" formalParameter="ET"></outputVariable>
+						</descriptionFFB>
+					</FFBBlock>
+					<emptyCell nbCells="6"></emptyCell>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="openContact" contactVariableName="break"></contact>
+					<HLink nbCells="2"></HLink>
+					<emptyCell nbCells="2"></emptyCell>
+					<coil typeCoil="notCoil" coilVariableName="allow_restart"></coil>
+					<HLink nbCells="5"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="96"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<animationTable name="Table" location="" version="1.0" dateTime="date_and_time#2019-4-10-10:51:37" ExtStringAnim="0" ExtStringAnimLen="100" PouOwner="Projet">
+		<elementDescription displayBase="4" name="Mont_cab"></elementDescription>
+		<elementDescription displayBase="4" name="Desc_cab"></elementDescription>
+	</animationTable>
+	<IOScreen version="V1.0"></IOScreen>
+	<Documentation version="V1.0">
+		<Station bDocumentationSave="0"></Station>
+		<Program_ST nMode="0" bXRef="0" bVariableUsed="0"></Program_ST>
+		<Program_IL nMode="0"></Program_IL>
+		<Program_FBD nMode="0"></Program_FBD>
+		<Program_LD nMode="0" bXRef="0" bVariableUsed="0"></Program_LD>
+		<Program_SFC nMode="0"></Program_SFC>
+		<OperatorScreens nSort="0" bMessageList="0" bGraphic="1" bVariable="0"></OperatorScreens>
+		<Variables_FBInstances nSort="0" bExpandArray="0" bExpandStructure="0" nProfile="0" b984Address="0"></Variables_FBInstances>
+		<TitlePage sDesigner="" sProject=""></TitlePage>
+		<General sGeneralInfo=""></General>
+		<Footer sAuthor="" sDepartment="" sBitmapPath="" sFreeText1="" sFreeText2="" sIndustrialProperty=""></Footer>
+	</Documentation>
+	<settings version="410">
+		<!--group unity.Settings-->
+		<!--group unity.General-->
+		<!--group unity.ManageBuildMessages-->
+		<entryvalue ident="unity.variableNotUsed" value="0"></entryvalue>
+		<entryvalue ident="unity.multiWritingOfVar" value="0"></entryvalue>
+		<entryvalue ident="unity.paramNotAssign" value="0"></entryvalue>
+		<entryvalue ident="unity.multiFBInstance" value="0"></entryvalue>
+		<entryvalue ident="unity.ddtMappingCompat" value="0"></entryvalue>
+		<entryvalue ident="unity.overlOfAdd" value="1"></entryvalue>
+		<entryvalue ident="unity.missingGatewayIPaddress" value="1"></entryvalue>
+		<entryvalue ident="unity.WarningsActif" value="1"></entryvalue>
+		<entryvalue ident="unity.NbWarnings" value="500"></entryvalue>
+		<entryvalue ident="unity.ErrorsActif" value="1"></entryvalue>
+		<entryvalue ident="unity.NbErrors" value="500"></entryvalue>
+		<!--group unity.BuildSettings-->
+		<entryvalue ident="unity.createNewDataBlockOnline" value="1"></entryvalue>
+		<entryvalue ident="unity.freeKbytes" value="1"></entryvalue>
+		<entryvalue ident="unity.virtCodeGenEnable" value="0"></entryvalue>
+		<entryvalue ident="unity.ldLink" value="1"></entryvalue>
+		<entryvalue ident="unity.ldOptCode" value="0"></entryvalue>
+		<entryvalue ident="unity.ApplyOnLineModif" value="1"></entryvalue>
+		<entryvalue ident="unity.IOScanningMode" value="0"></entryvalue>
+		<!--group unity.SaveOnDownload-->
+		<entryvalue ident="unity.SaveOnDownloadSTA" value="1"></entryvalue>
+		<entryvalue ident="unity.SaveOnDownloadSTU" value="0"></entryvalue>
+		<entryvalue ident="unity.SaveOnDownloadXVM" value="0"></entryvalue>
+		<!--group unity.PLCEmbeddedData-->
+		<entryvalue ident="unity.dataDictionary" value="0"></entryvalue>
+		<entryvalue ident="unity.dataDictionaryPreload" value="0"></entryvalue>
+		<entryvalue ident="unity.dataDictionaryChangeTimeOut" value="40"></entryvalue>
+		<entryvalue ident="unity.dataDictionaryOnlyHMIvariables" value="0"></entryvalue>
+		<entryvalue ident="unity.dataDictionaryWithProcessNamespace" value="0"></entryvalue>
+		<entryvalue ident="unity.actif" value="1"></entryvalue>
+		<entryvalue ident="unity.comment" value="1"></entryvalue>
+		<entryvalue ident="unity.animTable" value="0"></entryvalue>
+		<entryvalue ident="unity.ETSManagementMode" value="1"></entryvalue>
+		<entryvalue ident="unity.OptimizeOnlineChange" value="0"></entryvalue>
+		<!--group unity.PLCdiagnostics-->
+		<entryvalue ident="unity.application" value="0"></entryvalue>
+		<entryvalue ident="unity.applevel" value="0"></entryvalue>
+		<entryvalue ident="unity.system" value="1"></entryvalue>
+		<entryvalue ident="unity.language" value="4"></entryvalue>
+		<entryvalue ident="unity.RackViewerDiag" value="1"></entryvalue>
+		<entryvalue ident="unity.RackViewerVariableNames" value="0"></entryvalue>
+		<entryvalue ident="unity.ProgViewerDiag" value="0"></entryvalue>
+		<entryvalue ident="unity.PLCEventLogging" value="0"></entryvalue>
+		<entryvalue ident="unity.SYSLOGServerAddress" value="0.0.0.0"></entryvalue>
+		<entryvalue ident="unity.SYSLOGServerPort" value="601"></entryvalue>
+		<entryvalue ident="unity.SYSLOGServerProtocol" value="0"></entryvalue>
+		<!--group unity.PLCBehaviour-->
+		<entryvalue ident="unity.Reset_M_Stop_Run" value="0"></entryvalue>
+		<!--group unity.Path-->
+		<entryvalue ident="unity.HyperlinkRootPath" value=""></entryvalue>
+		<!--group unity.Time-->
+		<entryvalue ident="unity.TimeStampingMode" value="1"></entryvalue>
+		<entryvalue ident="unity.MaxEventsSored" value="0"></entryvalue>
+		<entryvalue ident="unity.CustomTimeZone" value="0"></entryvalue>
+		<entryvalue ident="unity.TimeZone" value="37"></entryvalue>
+		<entryvalue ident="unity.TimeZoneOffset" value="60"></entryvalue>
+		<entryvalue ident="unity.AdjustClock" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartMonth" value="2"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartDay" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartOccurrence" value="5"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartHour" value="2"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartMinute" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartSecond" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingStartOffset" value="60"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndMonth" value="9"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndDay" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndOccurrence" value="5"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndHour" value="3"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndMinute" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndSecond" value="0"></entryvalue>
+		<entryvalue ident="unity.DaylightSavingEndOffset" value="0"></entryvalue>
+		<!--group unity.Configuration-->
+		<entryvalue ident="unity.PreferredIOVision" value="0"></entryvalue>
+		<entryvalue ident="unity.PreferredIOVision_Q_EIO" value="0"></entryvalue>
+		<!--group unity.Variables-->
+		<entryvalue ident="unity.leadingDigit" value="0"></entryvalue>
+		<entryvalue ident="unity.CharSet" value="0"></entryvalue>
+		<entryvalue ident="unity.EBoolEdge" value="1"></entryvalue>
+		<entryvalue ident="unity.intDIntAsWordDWord" value="1"></entryvalue>
+		<entryvalue ident="unity.extractAnyBit" value="1"></entryvalue>
+		<entryvalue ident="unity.directRepArray" value="0"></entryvalue>
+		<entryvalue ident="unity.dynamicArray" value="0"></entryvalue>
+		<entryvalue ident="unity.arraySizeCompCheck" value="0"></entryvalue>
+		<entryvalue ident="unity.FastScanningForTrending" value="0"></entryvalue>
+		<entryvalue ident="unity.ForceReferenceInit" value="1"></entryvalue>
+		<entryvalue ident="unity.SaveRestoreDataRequest" value="0"></entryvalue>
+		<!--group unity.Program-->
+		<!--group unity.Languages-->
+		<entryvalue ident="unity.withFBD" value="1"></entryvalue>
+		<entryvalue ident="unity.withLD" value="1"></entryvalue>
+		<entryvalue ident="unity.withSFC" value="1"></entryvalue>
+		<entryvalue ident="unity.withIL" value="1"></entryvalue>
+		<entryvalue ident="unity.withST" value="1"></entryvalue>
+		<entryvalue ident="unity.with984" value="1"></entryvalue>
+		<!--group unity.languagecommon-->
+		<entryvalue ident="unity.generalProc" value="1"></entryvalue>
+		<entryvalue ident="unity.generalSub" value="1"></entryvalue>
+		<entryvalue ident="unity.nestedComment" value="0"></entryvalue>
+		<entryvalue ident="unity.multiAssign" value="0"></entryvalue>
+		<entryvalue ident="unity.emptyParam" value="1"></entryvalue>
+		<entryvalue ident="unity.STExpressions" value="1"></entryvalue>
+		<entryvalue ident="unity.RemanentLink" value="0"></entryvalue>
+		<entryvalue ident="unity.LDStructComment" value="0"></entryvalue>
+		<entryvalue ident="unity.implicitTypeConv" value="0"></entryvalue>
+		<!--group unity.FBD-->
+		<entryvalue ident="unity.FBDNbRow" value="240"></entryvalue>
+		<entryvalue ident="unity.FBDNbColumn" value="360"></entryvalue>
+		<!--group unity.LD-->
+		<entryvalue ident="unity.LDRightJustify" value="0"></entryvalue>
+		<entryvalue ident="unity.LDNbColumn" value="11"></entryvalue>
+		<entryvalue ident="unity.LDCellWidth" value="0"></entryvalue>
+		<entryvalue ident="unity.SingleScanEdgeDetectionEBool" value="0"></entryvalue>
+		<!--group unity.MixedDisplay-->
+		<entryvalue ident="unity.LDNbLinesCmt" value="1"></entryvalue>
+		<entryvalue ident="unity.LDNbLinesSym" value="1"></entryvalue>
+		<entryvalue ident="unity.LDNbLinesAdr" value="1"></entryvalue>
+		<!--group unity.SFC-->
+		<entryvalue ident="unity.macroSections" value="1"></entryvalue>
+		<entryvalue ident="unity.multiToken" value="0"></entryvalue>
+		<!--group unity.SFCmultiToken-->
+		<entryvalue ident="unity.nbActiveStep" value="32"></entryvalue>
+		<entryvalue ident="unity.nbActiveActions" value="96"></entryvalue>
+		<entryvalue ident="unity.setStep" value="1"></entryvalue>
+		<entryvalue ident="unity.parallelBranches" value="1"></entryvalue>
+		<entryvalue ident="unity.multiEvolution" value="1"></entryvalue>
+		<!--group unity.ST-->
+		<entryvalue ident="unity.jumpAndLabel" value="0"></entryvalue>
+		<!--group unity.LL984-->
+		<entryvalue ident="unity.SKPenabled" value="1"></entryvalue>
+		<!--group unity.NetworkDisplay-->
+		<!--group unity.View1-->
+		<entryvalue ident="unity.View1Line1" value="0"></entryvalue>
+		<entryvalue ident="unity.View1Line2" value="0"></entryvalue>
+		<entryvalue ident="unity.View1Line3" value="0"></entryvalue>
+		<entryvalue ident="unity.View1Line4" value="0"></entryvalue>
+		<entryvalue ident="unity.View1Line5" value="0"></entryvalue>
+		<entryvalue ident="unity.View1Line6" value="0"></entryvalue>
+		<entryvalue ident="unity.View1Line7" value="1"></entryvalue>
+		<entryvalue ident="unity.View1FontHeight" value="10"></entryvalue>
+		<!--group unity.View2-->
+		<entryvalue ident="unity.View2Line1" value="0"></entryvalue>
+		<entryvalue ident="unity.View2Line2" value="0"></entryvalue>
+		<entryvalue ident="unity.View2Line3" value="0"></entryvalue>
+		<entryvalue ident="unity.View2Line4" value="0"></entryvalue>
+		<entryvalue ident="unity.View2Line5" value="0"></entryvalue>
+		<entryvalue ident="unity.View2Line6" value="3"></entryvalue>
+		<entryvalue ident="unity.View2Line7" value="1"></entryvalue>
+		<entryvalue ident="unity.View2FontHeight" value="10"></entryvalue>
+		<!--group unity.View3-->
+		<entryvalue ident="unity.View3Line1" value="0"></entryvalue>
+		<entryvalue ident="unity.View3Line2" value="0"></entryvalue>
+		<entryvalue ident="unity.View3Line3" value="0"></entryvalue>
+		<entryvalue ident="unity.View3Line4" value="0"></entryvalue>
+		<entryvalue ident="unity.View3Line5" value="0"></entryvalue>
+		<entryvalue ident="unity.View3Line6" value="2"></entryvalue>
+		<entryvalue ident="unity.View3Line7" value="1"></entryvalue>
+		<entryvalue ident="unity.View3FontHeight" value="10"></entryvalue>
+		<!--group unity.View4-->
+		<entryvalue ident="unity.View4Line1" value="0"></entryvalue>
+		<entryvalue ident="unity.View4Line2" value="0"></entryvalue>
+		<entryvalue ident="unity.View4Line3" value="0"></entryvalue>
+		<entryvalue ident="unity.View4Line4" value="0"></entryvalue>
+		<entryvalue ident="unity.View4Line5" value="4"></entryvalue>
+		<entryvalue ident="unity.View4Line6" value="3"></entryvalue>
+		<entryvalue ident="unity.View4Line7" value="1"></entryvalue>
+		<entryvalue ident="unity.View4FontHeight" value="10"></entryvalue>
+		<entryvalue ident="unity.LL984PrintingView" value="3"></entryvalue>
+		<entryvalue ident="unity.LL984ColumnWidth" value="1,000000"></entryvalue>
+		<!--group unity.OperatorScreens-->
+		<entryvalue ident="unity.fullScreen" value="0"></entryvalue>
+		<!--group unity.ControlledScreen-->
+		<entryvalue ident="unity.varCtrlScreen" value=""></entryvalue>
+		<entryvalue ident="unity.displayScreenControl" value="0"></entryvalue>
+		<entryvalue ident="unity.displayScreenNumber" value="0"></entryvalue>
+		<!--group unity.LastOpenedScreen-->
+		<entryvalue ident="unity.varDispScreen" value=""></entryvalue>
+	</settings>
+</FEFExchangeFile>

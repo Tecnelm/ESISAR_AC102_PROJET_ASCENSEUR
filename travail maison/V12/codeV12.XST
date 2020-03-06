@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<STExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XLS V13.0 - 170914B" dateTime="date_and_time#2019-4-10-10:51:21" content="Fichier source ST" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.105" dateTime="date_and_time#2019-4-10-9:22:42"></contentHeader>
+	<program>
+		<identProgram name="ascenseur_code" type="section" task="MAST"></identProgram>
+		<STSource>(* "moving" :
+	0 : no move
+	1 : up
+	2 : down
+	3: break*)
+
+
+if Cmd_r_s then
+	if (not security_mode) then
+
+	if  (called_stage_1 or called_stage_2 or called_stage_3 or called_stage_4 or called_stage_5)and allow_restart and is_doors_closed and not(break) and (moving = 0 or moving =3 )then
+		case (moved) of 
+			1:
+				if last_floor &lt;5 then
+					case last_floor of 
+					2: if(called_mo_3 or called_mo_4 or called_de_5 or called_cab_3 or called_cab_4 or called_cab_5)then moving := moved;end_if;
+					3: if(called_mo_4 or called_de_5 or called_cab_4 or called_cab_5) then moving := moved;end_if;
+					4:if(called_de_5 or called_cab_5) then moving := moved;end_if;
+					end_case;
+					case last_floor of 
+				
+					2: if( called_cab_1 and not (called_cab_3 or called_cab_4 or called_cab_5)) then moving :=2; end_if;
+					3: if( (called_cab_1 or called_cab_2)  and not ( called_cab_4 or called_cab_5)) then moving :=2;end_if;
+					4: if( (called_cab_1 or called_cab_2 or called_cab_3) and not (called_cab_3 or called_cab_4 or called_cab_5)) then moving :=2;end_if;
+				
+					end_case;			
+				else
+				 moving :=2;
+				end_if;
+			
+			2:
+				if last_floor &gt;1 then
+					case last_floor of 
+					2: if(called_mo_1 or called_cab_1)then moving := moved;end_if;
+					3: if(called_mo_1 or called_de_2 or called_cab_1 or called_cab_2) then moving := moved;end_if;
+					4:if(called_mo_1 or called_de_2 or called_de_3 or called_cab_1 or called_cab_2 or called_cab_3) then moving := moved;end_if;
+					end_case;
+
+					case last_floor of 
+				
+					2: if( (called_cab_5 or called_cab_4 or called_cab_3) and not (called_cab_1)) then moving :=1;end_if;
+					3: if( (called_cab_5 or called_cab_4)  and not ( called_cab_1 or called_cab_2)) then moving :=1;end_if;
+					4: if( (called_cab_5) and not ( called_cab_1 or called_cab_2 or called_cab_3)) then moving :=1;end_if;
+				
+					end_case;			
+				else
+				 moving :=1;
+				end_if;
+		end_case;
+	end_if;
+
+	(* etage 1 *)
+		if Ap_cab_1 then called_cab_1 := true;end_if;
+		if Ap_mo_1 then called_mo_1 := true;  end_if;
+
+		
+
+
+		if Det_et_1 then 
+			last_floor :=1;
+			if called_stage_1 then 
+				moving :=0;
+				called_mo_1 := false;
+				called_cab_1 := false;
+				break := true;
+			end_if;
+		end_if;
+
+
+	(* etage 2 *)
+		if Ap_cab_2 then called_cab_2 := true; end_if;
+		if Ap_mo_2   then called_mo_2 := true;  end_if;
+		if Ap_2_de  then called_de_2 := true;  end_if;
+
+		if Det_et_2 then
+			last_floor :=2;
+			if called_stage_2 then
+				if not called_cab_2 then
+					case moving of
+					1: 	if called_mo_2 or called_de_2 and not(called_stage_5 or called_stage_4 or called_stage_3)then 
+							moved := moving;
+							moving :=3 ; 
+						end_if;
+					2:	if called_de_2 or called_mo_2 and not(called_stage_1) then 
+							moved := moving;
+							moving :=3 ;
+						end_if;
+					end_case;
+				else
+					if not(moving=3) then
+						moved := moving;
+						moving :=3;
+					end_if;	
+				end_if;
+
+				if moving = 3 or moving =0 then
+					called_mo_2 := false;
+					called_de_2 := false;
+					called_cab_2 := false;
+					break := true;
+				end_if;
+			end_if;
+		end_if;
+
+	(* etage 3 *)
+		if Ap_cab_3 then called_cab_3 := true; end_if;
+		if Ap_mo_3  then called_mo_3 := true;  end_if;
+		if Ap_3_de  then called_de_3 := true;  end_if;
+
+
+		if Det_et_3 then
+			last_floor :=3;
+			if called_stage_3 then
+				if not called_cab_3 then
+					case moving of
+					1: 	if called_mo_3 or called_de_3 and not(called_stage_5 or called_stage_4) then 
+							moved := moving;
+							moving :=3 ; 
+						end_if;
+					2:	if called_de_3 or called_mo_3 and not(called_stage_2 or called_stage_1) then 
+							moved := moving;
+							moving :=3 ;
+						end_if;
+					end_case;
+				else
+					if not(moving=3) then
+						moved := moving;
+						moving :=3;
+					end_if;
+
+				end_if;
+				
+				if moving = 3 or moving = 0  then
+					called_mo_3 := false;
+					called_de_3 := false;
+					called_cab_3 := false;
+					break := true;
+				end_if;
+			
+			end_if;
+			
+		end_if;
+
+	(* etage 4 *)
+		if Ap_cab_4 then called_cab_4 := true;end_if;
+		if Ap_mo_4 then called_mo_4 := true;  end_if;
+		if Ap_4_de then called_de_4 := true;  end_if;
+
+		if Det_et_4 then
+			last_floor :=4;
+			if called_stage_4 then
+				if not called_cab_4 then
+					case moving of
+					1: 	if called_mo_4 or called_de_4 and not(called_stage_5) then 
+							moved := moving;
+							moving :=3 ; 
+						end_if;
+					2:	if called_de_4 or called_mo_4 and not(called_stage_3 or called_stage_2 or called_stage_1) then 
+							moved := moving;
+							moving :=3 ;
+						end_if;
+					end_case;
+				else
+					if not(moving=3) then
+						moved := moving;
+						moving :=3;
+					end_if;	
+				end_if;
+
+				if moving = 3 or moving = 0 then
+					called_mo_4 := false;
+					called_de_4 := false;
+					called_cab_4 := false;
+					break := true;
+				end_if;
+			end_if;
+		end_if;
+
+	(* etage 5 *)
+		if Ap_cab_5 then called_cab_5 := true;end_if;
+		if Ap_5_de then called_de_5 := true;  end_if;
+
+		if Det_et_5 then	
+			last_floor :=5;
+			if called_stage_5 then 
+				moving :=0;
+				called_cab_5 := false;
+				called_de_5 := false;
+				break := true;
+			end_if;
+		end_if;
+		(* sécurité partie*)
+		if Fdc_bas then moving := 0; security_mode :=true; Mont_cab:=false; Desc_cab:=false; end_if;
+		if not Bp_atu then security_mode := true; end_if;
+	
+		if not(is_doors_closed) then
+			if moving = 0 or moving = 3 then
+				case last_floor of
+					1: 	if not( Porte_et2 and Porte_et3 and Porte_et4 and Porte_et5) then security_mode := true; end_if;
+					2:	if not( Porte_et1 and Porte_et3 and Porte_et4 and Porte_et5) then security_mode := true; end_if;
+					3:	if not( Porte_et1 and Porte_et2 and Porte_et4 and Porte_et5) then security_mode := true; end_if;
+					4:	if not( Porte_et1 and Porte_et2 and Porte_et3 and Porte_et5) then security_mode := true; end_if;
+					5:	if not( Porte_et1 and Porte_et2 and Porte_et3 and Porte_et4) then security_mode := true; end_if;
+					else security_mode := true;
+				end_case;
+
+			else
+				security_mode := true;
+			end_if;		
+		end_if;
+		if security_mode then
+
+			last_floor :=0;
+			moving :=0;
+			Mont_cab := false;
+			Desc_cab := false;	
+		
+			called_cab_1:=false;
+			called_cab_2:=false;
+			called_cab_3:=false;
+			called_cab_4:=false;
+			called_cab_5:=false;
+		
+			called_de_2:=false;
+			called_de_3:=false;
+			called_de_4:=false;
+			called_de_5:=false;
+
+			called_mo_1:=false;
+			called_mo_2:=false;
+			called_mo_3:=false;
+			called_mo_4:=false;
+		end_if;
+
+	else (*SI mode sécurité*)
+		if  Bp_atu then
+			if Ap_cab_1 then called_cab_1 := true; end_if;
+			if Ap_mo_1  then called_mo_1 := true;  end_if;
+
+			if called_stage_1 and is_doors_closed then
+				moving := 2;
+			end_if;
+
+			if Det_et_1 then 
+				last_floor :=1;
+				security_mode:=false;
+				moving :=0;
+				called_cab_1 := false;
+				called_mo_1 :=false;
+			end_if;
+		end_if;
+		if not is_doors_closed or not Bp_atu then
+
+			last_floor :=0;
+			moving :=0;
+
+			Mont_cab := false;
+			Desc_cab := false;
+			
+			called_cab_1:=false;
+			called_mo_1:=false;		
+		end_if;
+
+	end_if;
+else 
+	
+	called_cab_1:=false;
+	called_cab_2:=false;
+	called_cab_3:=false;
+	called_cab_4:=false;
+	called_cab_5:=false;
+		
+	called_de_2:=false;
+	called_de_3:=false;
+	called_de_4:=false;
+	called_de_5:=false;
+
+	called_mo_1:=false;
+	called_mo_2:=false;
+	called_mo_3:=false;
+	called_mo_4:=false;
+	(*security_mode:=false;*)
+	moving :=0;
+	
+	last_floor:=0;
+	security_mode:=true;
+	Mont_cab := false;
+	Desc_cab := false;
+end_if;
+
+(*déplacement et affichage*)
+
+case moving of
+0,3: Mont_cab := false;
+	Desc_cab := false;
+
+1: Mont_cab := true; 
+	Desc_cab := false; 
+	moved := 1;
+
+2:  Mont_cab := false; 
+    Desc_cab := true; 
+    moved := 2;
+end_case;
+
+case last_floor of
+	1:	AFFICHEUR[0] := TRUE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := FALSE;
+
+	2:	AFFICHEUR[0] := FALSE;
+		AFFICHEUR[1] := TRUE;
+		AFFICHEUR[2] := False;
+
+	3:	AFFICHEUR[0] := TRUE;
+		AFFICHEUR[1] := TRUE;
+		AFFICHEUR[2] := FALSE;
+
+	4:	AFFICHEUR[0] := FALSE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := TRUE;
+
+	5:	AFFICHEUR[0] := TRUE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := TRUE;
+	else 
+		AFFICHEUR[0] := FALSE;
+		AFFICHEUR[1] := FALSE;
+		AFFICHEUR[2] := FALSE;
+end_case;
+
+if not allow_restart then
+	break:= false;
+end_if;
+</STSource>
+	</program>
+	<dataBlock>
+		<variables name="called_mo_3" typeName="BOOL"></variables>
+		<variables name="Det_et_4" typeName="EBOOL" topologicalAddress="%I0.1.5">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_mo_4" typeName="BOOL"></variables>
+		<variables name="Ap_2_de" typeName="EBOOL" topologicalAddress="%I0.1.8">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_4" typeName="EBOOL" topologicalAddress="%I0.1.30">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_3" typeName="EBOOL" topologicalAddress="%I0.1.19">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_cab_1" typeName="BOOL"></variables>
+		<variables name="last_floor" typeName="INT">
+			<variableInit value="0"></variableInit>
+		</variables>
+		<variables name="Ap_mo_3" typeName="EBOOL" topologicalAddress="%I0.1.29">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_5" typeName="EBOOL" topologicalAddress="%I0.1.13">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_3_de" typeName="EBOOL" topologicalAddress="%I0.1.9">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_5" typeName="EBOOL" topologicalAddress="%I0.1.6">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="moving" typeName="INT"></variables>
+		<variables name="called_mo_1" typeName="BOOL"></variables>
+		<variables name="Det_et_1" typeName="EBOOL" topologicalAddress="%I0.1.2">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_1" typeName="EBOOL" topologicalAddress="%I0.1.23">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_cab_2" typeName="BOOL"></variables>
+		<variables name="called_stage_5" typeName="BOOL"></variables>
+		<variables name="called_stage_2" typeName="BOOL"></variables>
+		<variables name="Porte_et3" typeName="EBOOL" topologicalAddress="%I0.1.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="AFFICHEUR" typeName="ARRAY[0..3] OF EBOOL" topologicalAddress="%Q0.2.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_stage_1" typeName="BOOL"></variables>
+		<variables name="called_de_3" typeName="BOOL"></variables>
+		<variables name="Desc_cab" typeName="EBOOL" topologicalAddress="%Q0.2.1">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et4" typeName="EBOOL" topologicalAddress="%I0.1.21">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Mont_cab" typeName="EBOOL" topologicalAddress="%Q0.2.0">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_2" typeName="EBOOL" topologicalAddress="%I0.1.18">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Cmd_r_s" typeName="EBOOL" topologicalAddress="%I0.1.0">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et1" typeName="EBOOL" topologicalAddress="%I0.1.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_cab_1" typeName="EBOOL" topologicalAddress="%I0.1.17">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_mo_2" typeName="EBOOL" topologicalAddress="%I0.1.28">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Det_et_3" typeName="EBOOL" topologicalAddress="%I0.1.4">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Ap_4_de" typeName="EBOOL" topologicalAddress="%I0.1.10">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_de_2" typeName="BOOL"></variables>
+		<variables name="Det_et_2" typeName="EBOOL" topologicalAddress="%I0.1.3">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="allow_restart" typeName="BOOL"></variables>
+		<variables name="called_stage_4" typeName="BOOL"></variables>
+		<variables name="Ap_cab_4" typeName="EBOOL" topologicalAddress="%I0.1.12">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_de_5" typeName="BOOL"></variables>
+		<variables name="Bp_atu" typeName="EBOOL" topologicalAddress="%I0.1.16">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="moved" typeName="INT">
+			<variableInit value="0"></variableInit>
+		</variables>
+		<variables name="Ap_5_de" typeName="EBOOL" topologicalAddress="%I0.1.11">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_de_4" typeName="BOOL"></variables>
+		<variables name="Fdc_bas" typeName="EBOOL" topologicalAddress="%I0.1.7">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="security_mode" typeName="BOOL">
+			<variableInit value="TRUE"></variableInit>
+		</variables>
+		<variables name="called_cab_3" typeName="BOOL"></variables>
+		<variables name="is_doors_closed" typeName="BOOL"></variables>
+		<variables name="called_cab_4" typeName="BOOL"></variables>
+		<variables name="Porte_et5" typeName="EBOOL" topologicalAddress="%I0.1.22">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="called_mo_2" typeName="BOOL"></variables>
+		<variables name="called_cab_5" typeName="BOOL"></variables>
+		<variables name="break" typeName="BOOL"></variables>
+		<variables name="called_stage_3" typeName="BOOL"></variables>
+		<variables name="Porte_et2" typeName="EBOOL" topologicalAddress="%I0.1.15">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+	</dataBlock>
+</STExchangeFile>

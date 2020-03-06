@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LDExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XL V8.0 - 131118" dateTime="date_and_time#2019-2-2-21:8:19" content="Fichier source LD" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.38" dateTime="date_and_time#2019-2-2-21:7:19"></contentHeader>
+	<program>
+		<identProgram name="Pb_Porte" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<emptyLine nbRows="2"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<HLink nbCells="1"></HLink>
+					<contact typeContact="openContact" contactVariableName="Porte_et1"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et2"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et3"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et4"></contact>
+					<contact typeContact="openContact" contactVariableName="Porte_et5"></contact>
+					<coil typeCoil="coil" coilVariableName="is_doors_closed"></coil>
+					<HLink nbCells="4"></HLink>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="97"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<dataBlock>
+		<variables name="Porte_et3" typeName="EBOOL" topologicalAddress="%I0.1.20">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et1" typeName="EBOOL" topologicalAddress="%I0.1.14">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="is_doors_closed" typeName="BOOL"></variables>
+		<variables name="Porte_et5" typeName="EBOOL" topologicalAddress="%I0.1.22">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et2" typeName="EBOOL" topologicalAddress="%I0.1.15">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+		<variables name="Porte_et4" typeName="EBOOL" topologicalAddress="%I0.1.21">
+			<attribute name="TimeStampSource" value="0"></attribute>
+		</variables>
+	</dataBlock>
+</LDExchangeFile>
